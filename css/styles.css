@@ -61,7 +61,7 @@ footer {
 @media (max-width: 767px) {
   /* Hero */
   .hero {
-    height: 145vh;
+    height: 100vh;
   }
 
   .hero-content {
