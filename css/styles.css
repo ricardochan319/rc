@@ -60,10 +60,6 @@ footer {
 /* Small screens and above */
 @media (max-width: 767px) {
   /* Hero */
-  .hero {
-    height: 100vh;
-  }
-
   .hero-content {
     max-width: 80%;
   }
