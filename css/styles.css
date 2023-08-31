@@ -5,7 +5,7 @@ body {
 /* Hero */
 .hero {
   height: 100vh;
-  background: linear-gradient(60deg, #8834fd, #c756ec);
+  background: linear-gradient(60deg, #6400f0, #a9a5c6);
 }
 
 /* Set maximum width for the hero content */
