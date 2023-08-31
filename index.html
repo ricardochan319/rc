@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ricardo Chan</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css"
+      integrity="sha384-..."
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <section
+      class="hero text-white d-flex align-items-center justify-content-center py-5"
+    >
+      <div class="container text-center hero-content">
+        <h1 class="display-4 mb-4 typing-effect">
+          <span id="typing-word">Hola, ¿cómo estás?</span
+          ><span class="typing-cursor">|</span>
+        </h1>
+      </div>
+    </section>
+
+    <footer class="text-white text-center d-flex align-items-center">
+      <div class="container">
+        <p>&copy; Ricardo Chan</p>
+      </div>
+    </footer>
+
+    <script>
+      const typingWordElement = document.getElementById("typing-word");
+      const typingCursorElement = document.querySelector(".typing-cursor");
+      const words = ["Chonga❗️ 🤡", "¿Qué haces?"];
+      let wordIndex = 0;
+      let letterIndex = 0;
+      let isDeleting = false;
+      let cursorVisible = true;
+
+      function type() {
+        const currentWord = words[wordIndex];
+        const text = currentWord.substring(0, letterIndex);
+        typingWordElement.textContent = text;
+
+        if (!isDeleting) {
+          letterIndex++;
+          if (letterIndex > currentWord.length) {
+            isDeleting = true;
+            letterIndex = currentWord.length;
+          }
+        } else {
+          letterIndex--;
+          if (letterIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+          }
+        }
+
+        cursorVisible = !cursorVisible;
+        typingCursorElement.style.display = cursorVisible ? "inline" : "none";
+
+        const typingSpeed = isDeleting ? 450 : 350;
+        setTimeout(type, typingSpeed);
+      }
+
+      type();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

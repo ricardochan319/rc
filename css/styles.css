@@ -1,0 +1,70 @@
+body {
+  line-height: 1.5;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: linear-gradient(60deg, #8834fd, #c756ec);
+}
+
+/* Set maximum width for the hero content */
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-weight: bold;
+}
+
+/* Style the typing cursor */
+.typing-cursor {
+  font-weight: normal;
+}
+
+.hero p {
+  line-height: 2;
+}
+
+/* Add margin-bottom to the heading and paragraph */
+.hero-content p,
+.hero-content a {
+  margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+  height: 10vh;
+  background-color: #324158;
+  color: white;
+  font-size: 0.75rem;
+  line-height: 2;
+}
+
+/* Large screens and above */
+@media (min-width: 992px) {
+  /* Hero */
+  .hero-content {
+    max-width: 60%;
+  }
+}
+
+/* Medium screens and above */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Hero */
+  .hero-content {
+    max-width: 70%;
+  }
+}
+
+/* Small screens and above */
+@media (max-width: 767px) {
+  /* Hero */
+  .hero {
+    height: 145vh;
+  }
+
+  .hero-content {
+    max-width: 80%;
+  }
+}
